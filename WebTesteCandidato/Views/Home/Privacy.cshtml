@@ -1,0 +1,58 @@
+﻿@model IEnumerable<EntitiesTesteCandidato.Cep>
+
+@{
+    ViewData["Title"] = "Lista de Endereço";
+}
+<h1>Lista de Endereço</h1>
+
+
+<div class="table-responsive" style="padding:10px">
+    <table id="example1" class="table no-margin">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>cep</th>
+                <th>Endereço</th>
+                <th>Bairro</th>
+                <th>Cidade</th>
+                <th>UF</th>
+                <th>Unidade</th>
+                <th>IBGE</th>
+                <th>GIA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <div style="height: 50px;">
+                @foreach (var dados in Model)
+                {
+            <tr>
+                <td>@dados.Id</td>
+                <td>
+                    @dados.cep
+                </td>
+                <td>
+                    @dados.logradouro
+                </td>
+                <td>
+                    @dados.bairro
+                </td>
+                <td>
+                    @dados.localidade
+                </td>
+                <td>
+                    @dados.uf
+                </td>
+                <td>
+                    @dados.unidade
+                </td>
+                <td>
+                    @dados.ibge
+                <td>
+                    @dados.gia
+                </td>                
+            </tr>
+            }
+
+    </div>
+    </tbody>
+    </table>
